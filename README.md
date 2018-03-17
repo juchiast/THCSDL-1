@@ -1,0 +1,4 @@
+- Mỗi người code 1 file riêng, file nhập dữ liệu: `nhap_du_lieu.sql`
+- Làm xong câu nào thì vào [đây](https://github.com/juchiast/THCSDL-1/issues/1) check câu đó.
+- Trong code nhớ comment số thứ tự câu trước code.
+- Thấy bug trong code người khác thì báo trong nhóm chat, tự fix cũng nhớ báo.
