@@ -38,6 +38,9 @@ where dt.madt like '006' and bm.tenbm like 'Vi sinh'
 select gv.hoten
 from bomon bm join giaovien gv on bm.truongbm = gv.magv
 where bm.mabm like 'HTTT'
+--Q16
+select gv.hoten as hoten, gvql.hoten as hotengvql
+from giaovien gv left join giaovien gvql on gv.gvqlcm = gvql.magv
 --Q23
 select distinct gv.magv
 from giaovien gv join thamgiadt tg on gv.magv = tg.magv 
