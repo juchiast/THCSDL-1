@@ -138,7 +138,7 @@ insert into bomon values
 ('SH', N'Sinh hóa', 'B33', '0838898989', NULL, 'SH', NULL),
 (N'VLĐT', N'Vật lý điện tử', 'B23', '0838234234', NULL, 'VL', NULL),
 (N'VLƯD', N'Vật lý ứng dụng', 'B24', '0838454545', '005', 'VL', '20060218'),
-('VS', 'Vi sinh', 'B32', '0838909090', '004', 'SH', '20070101')
+('VS', N'Vi sinh', 'B32', '0838909090', '004', 'SH', '20070101')
 go
 
 update giaovien set giaovien.mabm = 'HTTT' where magv in ('002', '003')
@@ -167,22 +167,22 @@ insert into nguoithan values
 ('007', 'Vy', '20000214', N'Nữ'),
 ('008', 'Nam', '19910506', 'Nam'),
 ('009', 'An', '19960819', 'Nam'),
-('010', 'Nguyệt', '20060114', N'Nữ')
+('010', N'Nguyệt', '20060114', N'Nữ')
 
 insert into chude values
 ('NCPT', N'Nghiên cứu phát triển'),
 ('QLGD', N'Quản lý giáo dục'),
-('ƯDCN', N'Ứng dụng công nghệ')
+(N'ƯDCN', N'Ứng dụng công nghệ')
 go
 
 insert into detai values
-('001', N'HTTT quản lý các trường ĐH', 'ĐHQG', 20, '20071020', '20081020', 'QLGD', '002'),
-('002', N'HTTT quản lý giáo vụ cho một Khoa', 'Trường', 20, '20001012', '20011012', 'QLGD', '002'),
-('003', N'Nghiên cứu chế tạo ra sợi Nanô Platin', 'ĐHQG', 300, '20080515', '20100515', 'NCPT', '005'),
-('004', N'Tạo vật liệu sinh học bằng màng ối người', 'Nhà nước', 100, '20070101', '20091231', 'NCPT', '004'),
-('005', N'Ứng dụng hóa học xanh', 'Trường', 200, '20031010', '20041210', N'ƯDCN', '007'),
-('006', N'Nghiên cứu tế bào gốc', 'Nhà nước', 4000, '20061020', '20091020', 'NCPT', '004'),
-('007', N'HTTT quản lý thư viện các trường ĐH', 'Trường', 20, '20090510', '20100510', 'QLGD', '001')
+('001', N'HTTT quản lý các trường ĐH', N'ĐHQG', 20, '20071020', '20081020', 'QLGD', '002'),
+('002', N'HTTT quản lý giáo vụ cho một Khoa', N'Trường', 20, '20001012', '20011012', 'QLGD', '002'),
+('003', N'Nghiên cứu chế tạo ra sợi Nanô Platin', N'ĐHQG', 300, '20080515', '20100515', 'NCPT', '005'),
+('004', N'Tạo vật liệu sinh học bằng màng ối người', N'Nhà nước', 100, '20070101', '20091231', 'NCPT', '004'),
+('005', N'Ứng dụng hóa học xanh', N'Trường', 200, '20031010', '20041210', N'ƯDCN', '007'),
+('006', N'Nghiên cứu tế bào gốc', N'Nhà nước', 4000, '20061020', '20091020', 'NCPT', '004'),
+('007', N'HTTT quản lý thư viện các trường ĐH', N'Trường', 20, '20090510', '20100510', 'QLGD', '001')
 go
 insert into congviec values
 ('001', 1, N'Khởi tạo và Lập kế hoạch', '20071020', '20081220'),
