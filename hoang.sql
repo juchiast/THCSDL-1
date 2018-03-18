@@ -28,7 +28,7 @@ from detai dt left join giaovien gv on dt.gvcndt=gv.magv
 --Q8
 select k.tenkhoa,gv.*
 from Khoa k left join giaovien gv on k.truongkhoa=gv.magv
- --Q9
+--Q9
 select distinct gv.hoten
 from detai dt join thamgiadt tg on dt.madt = tg.madt
 			  join giaovien gv on tg.magv = gv.magv
@@ -41,6 +41,18 @@ where bm.mabm like 'HTTT'
 --Q16
 select gv.hoten as hoten, gvql.hoten as hotengvql
 from giaovien gv left join giaovien gvql on gv.gvqlcm = gvql.magv
+--Q17
+select dt.tendt,cv.madt,cv.stt
+from detai dt join congviec cv on dt.madt = cv.madt
+where cv.ngaybd > '20070101' and cv.ngaybd < '20070108'
+--Q20
+select gv.hoten
+from giaovien gv join bomon bm on gv.magv = bm.truongbm
+				 join khoa k on bm.truongbm = k.truongkhoa
+--Q22
+select distinct gv.magv
+from giaovien gv join detai dt on gv.magv = dt.gvcndt
+			     join khoa k on gv.magv = k.truongkhoa
 --Q23
 select distinct gv.magv
 from giaovien gv join thamgiadt tg on gv.magv = tg.magv 
