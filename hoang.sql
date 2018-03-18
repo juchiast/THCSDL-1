@@ -34,6 +34,15 @@ from detai dt join thamgiadt tg on dt.madt = tg.madt
 			  join giaovien gv on tg.magv = gv.magv
 			  join bomon bm on gv.mabm = bm.mabm 
 where dt.madt like '006' and bm.tenbm like 'Vi sinh'
+--Q13
+select gv.hoten
+from bomon bm join giaovien gv on bm.truongbm = gv.magv
+where bm.mabm like 'HTTT'
+--Q23
+select distinct gv.magv
+from giaovien gv join thamgiadt tg on gv.magv = tg.magv 
+			     join bomon bm on gv.mabm = bm.mabm
+where bm.tenbm like 'HTTT' or tg.madt like '001'
 --Q25
 select gv.hoten,bm.tenbm
 from bomon bm left join giaovien gv on bm.truongbm = gv.magv
@@ -41,12 +50,4 @@ where gv.hoten like N'%'
 --Q26
 select gv.hoten,gv.luong
 from giaovien gv
---Q23
-select distinct gv.magv
-from giaovien gv join thamgiadt tg on gv.magv = tg.magv 
-			     join bomon bm on gv.mabm = bm.mabm
-where bm.tenbm like 'HTTT' or tg.madt like '001'
---Q13
-select gv.hoten
-from bomon bm join giaovien gv on bm.truongbm = gv.magv
-where bm.mabm like 'HTTT'
+
