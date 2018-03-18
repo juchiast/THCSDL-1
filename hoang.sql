@@ -46,3 +46,7 @@ select distinct gv.magv
 from giaovien gv join thamgiadt tg on gv.magv = tg.magv 
 			     join bomon bm on gv.mabm = bm.mabm
 where bm.tenbm like 'HTTT' or tg.madt like '001'
+--Q13
+select gv.hoten
+from bomon bm join giaovien gv on bm.truongbm = gv.magv
+where bm.mabm like 'HTTT'
