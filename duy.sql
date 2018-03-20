@@ -1,10 +1,20 @@
 use QLDT
 go
 
+-- Q11
+select gv.hoten, gv1.hoten as nguoiphutrach from
+giaovien gv left join giaovien gv1 on gv.gvqlcm = gv1.magv
+
 -- Q12
 select gv.hoten from
 giaovien gv join giaovien gv1 on gv.gvqlcm = gv1.magv
 where gv1.hoten = N'Nguyễn Thanh Tùng'
+
+-- Q14
+select distinct gv.hoten from
+detai dt join chude cd on dt.macd = cd.macd
+join giaovien gv on dt.gvcndt = gv.magv
+where cd.tencd = N'Quản lý giáo dục'
 
 -- Q18
 select gv1.hoten from
