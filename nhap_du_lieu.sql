@@ -112,7 +112,7 @@ go
 
 insert into giaovien values
 ('001', N'Nguyễn Hoài An', 2000, N'Nam', '19730215', N'25/3 Lạc Long Quân, Q.10, TP HCM', NULL, NULL),
-('002', N'Trần Hà Hương', 2500, N'Nữ', '19600620', N'125 Trần Hưng Đạo, Q.1,TP HCM', NULL, NULL),
+('002', N'Trần Trà Hương', 2500, N'Nữ', '19600620', N'125 Trần Hưng Đạo, Q.1,TP HCM', NULL, NULL),
 ('003', N'Nguyễn Ngọc Ánh', 2200, N'Nữ', '19750511', N'12/21 Võ Văn Ngân Thủ Đức, TP HCM', '002', NULL),
 ('004', N'Trương Nam Sơn', 2300, N'Nam', '19590620', N'215 Lý Thường Kiệt,TP Biên Hòa', NULL, NULL),
 ('005', N'Lý Hoàng Hà', 2500, N'Nam', '19541023', N'22/5 Nguyễn Xí, Q.Bình Thạnh, TP HCM', NULL, NULL),
