@@ -21,7 +21,7 @@ select bm.*,gv.*
 from bomon bm left join giaovien gv on bm.truongbm = gv.magv
 --Q6
 select gv.hoten,bm.*
-from giaovien gv left join bomon bm on bm.truongbm = gv.magv
+from giaovien gv left join bomon bm on bm.mabm = gv.mabm
 --Q7
 select  dt.tendt,gv.hoten
 from detai dt left join giaovien gv on dt.gvcndt=gv.magv
@@ -33,22 +33,22 @@ select distinct gv.hoten
 from detai dt join thamgiadt tg on dt.madt = tg.madt
 			  join giaovien gv on tg.magv = gv.magv
 			  join bomon bm on gv.mabm = bm.mabm 
-where dt.madt like '006' and bm.tenbm like 'Vi sinh'
+where dt.madt like '006' and bm.tenbm like N'Vi sinh'
 --Q13
 select gv.hoten
 from bomon bm join giaovien gv on bm.truongbm = gv.magv
-where bm.mabm like 'HTTT'
+where bm.mabm like N'HTTT'
 --Q16
 select gv.hoten as hoten, gvql.hoten as hotengvql
 from giaovien gv left join giaovien gvql on gv.gvqlcm = gvql.magv
 --Q17
-select dt.tendt,cv.madt,cv.stt
-from detai dt join congviec cv on dt.madt = cv.madt
+select cv.*
+from congviec cv
 where cv.ngaybd > '20070101' and cv.ngaybd < '20070108'
 --Q20
 select gv.hoten
 from giaovien gv join bomon bm on gv.magv = bm.truongbm
-				 join khoa k on bm.truongbm = k.truongkhoa
+				 join khoa k on gv.magv = k.truongkhoa
 --Q22
 select distinct gv.magv
 from giaovien gv join detai dt on gv.magv = dt.gvcndt
@@ -57,11 +57,10 @@ from giaovien gv join detai dt on gv.magv = dt.gvcndt
 select distinct gv.magv
 from giaovien gv join thamgiadt tg on gv.magv = tg.magv 
 			     join bomon bm on gv.mabm = bm.mabm
-where bm.tenbm like 'HTTT' or tg.madt like '001'
+where bm.tenbm like N'HTTT' or tg.madt like '001'
 --Q25
-select gv.hoten,bm.tenbm
-from bomon bm left join giaovien gv on bm.truongbm = gv.magv
-where gv.hoten like N'%'
+select gv.hoten
+from bomon bm join giaovien gv on bm.truongbm = gv.magv
 --Q26
 select gv.hoten,gv.luong
 from giaovien gv
